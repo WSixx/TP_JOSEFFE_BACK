@@ -1,3 +1,9 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/789ff5cc-d427-4004-a3bc-2d460d9eeb65/resourceGroups/TP/providers/Microsoft.Web/sites/tpdb",
+    "appService.deploySubpath": "."
 }

@@ -1,6 +1,6 @@
 
 // Define a string de conexão com o banco de dados
-module.exports = {
+/* module.exports = {
     development: {
         database: {
             host: 'localhost',
@@ -19,3 +19,32 @@ module.exports = {
     }
 } 
 
+ */
+const fs = require('fs');
+
+
+module.exports = {
+    development: {
+        database: {
+            host: 'db-vendas.mysql.database.azure.com',
+            port: 3306,
+            name: 'db_vendas',
+            dialect: 'mysql',
+            database: 'quickstartdb',
+            user: 'lucassilvs@db-vendas',
+            password: 'TpfinalJoseffe2',
+            ssl: {require:true},
+            dialectOptions: {
+                ssl: {
+                  ca: fs.readFileSync('./certs/BaltimoreCyberTrustRoot.crt.pem'),
+                }
+              },
+        }
+    },
+    production:{
+        database: {
+            host: process.env.DB_HOST,
+            host: process.env.DB_PORT
+        }
+    }
+} 
