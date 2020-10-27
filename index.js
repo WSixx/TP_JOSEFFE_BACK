@@ -10,7 +10,7 @@ app.use(express.json());
  
 app.use(cors());
  
-app.use('/sistema', routes);
+app.use('/', routes);
 
  
 app.use((req, res, next) => {
@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 });
 
 const port = process.env.port || 8080;
+//app.listen(port);
 
 sequelize.sync({force: false}).then( () => {
     //const port = 3000;

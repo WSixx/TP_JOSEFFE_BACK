@@ -14,21 +14,21 @@ const Pedidos = sequelize.define("pedidos", {
     },
     nomePedido: {
         allowNull: false,
-        type: Sequelize.STRING(),
+        type: Sequelize.STRING,
         validate: {
             len: [1, 100]
         }
     },
     itemsPedido: {
         allowNull: false,
-        type: Sequelize.INTEGER(),
+        type: Sequelize.INTEGER,
         validate: {
             len: [1, 100]
         }
     },
     precoPedido: {
         allowNull: true,
-        type: Sequelize.DOUBLE(),
+        type: Sequelize.DOUBLE,
         validate: {
             len: [1, 999999]
         }

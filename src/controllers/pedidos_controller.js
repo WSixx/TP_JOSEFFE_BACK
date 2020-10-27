@@ -57,8 +57,8 @@ exports.SelectDetail = (req, res, next) => {
 
 exports.Update = (req, res, next) => {
     const id = req.params.id;
-    const itemsPedido = req.params.itemsPedido;
-    const nomePedido = req.params.nomePedido;
+    const itemsPedido = req.body.itemsPedido;
+    const nomePedido = req.body.nomePedido;
     const precoPedido = req.body.precoPedido;
    
  

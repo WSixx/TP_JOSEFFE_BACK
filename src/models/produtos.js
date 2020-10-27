@@ -21,21 +21,21 @@ const Produto = sequelize.define("produtos", {
     },
     produtoPrecoCusto: {
         allowNull: false,
-        type: Sequelize.DOUBLE(),
+        type: Sequelize.DOUBLE,
         validate: {
             len: [1, 999999]
         }
     },
     produtoPrecoVenda: {
         allowNull: false,
-        type: Sequelize.DOUBLE(),
+        type: Sequelize.DOUBLE,
         validate: {
             len: [1, 999999]
         }
     },
     produtoQtd: {
         allowNull: false,
-        type: Sequelize.INTEGER(),
+        type: Sequelize.INTEGER,
         validate: {
             len: [1, 999999]
         }
