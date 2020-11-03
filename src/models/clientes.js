@@ -3,7 +3,6 @@ const Sequelize = require('sequelize');
  
 // Obtem dados de conexão entre sequelize e banco de dados MySQL
 const sequelize = require('../database/database.js');
-const Pedidos = require('./pedidos.js');
 
 const Clientes = sequelize.define("clientes", {
     idCliente: {
